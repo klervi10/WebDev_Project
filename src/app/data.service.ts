@@ -12,7 +12,6 @@ export class DataService {
 
   getMeals(): Observable<Meals[]> {
     return this.httpClient.get<any>('https://www.themealdb.com/api/json/v1/1/search.php?s').pipe(
-      tap((data: any) => console.log(data)),
       map((data: any) => data.meals),
       map((data: any[]) => {
         const res: Meals[] = [];
@@ -23,7 +22,6 @@ export class DataService {
             img: data[i].strMealThumb,
           });
         }
-        console.log(res);
         return res;
       }),
     );

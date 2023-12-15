@@ -23,10 +23,6 @@ export class SearchBarComponent implements OnInit {
       (filterValue: string) => this.filterEvent.emit(filterValue)
     )
   }
-
-  Meal() {
-    //console.log('Search for meal:', this.name.value);
-  }    //this.search.emit(this.searchTerm);
 }
 
 

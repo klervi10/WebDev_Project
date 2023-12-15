@@ -20,10 +20,6 @@ export class HomeComponent implements OnInit {
     this.currentMonth = this.mealService.getMonthName(this.currentDate.getMonth());
     this.currentDay = this.mealService.getDayOfWeek(this.currentDate.getDay());
 
-    //this.mealService.loadRandomMeal().subscribe(
-    //  data => console.log(data)
-    //);
-
     this.loadMeals();
   }
 
