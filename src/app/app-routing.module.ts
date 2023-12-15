@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component'; 
 import { AboutComponent } from './about/about.component';
 import { StudentMealsComponent } from './student-meals/student-meals.component';
-import { ElaborateMealsComponent } from './elaborate-meals/elaborate-meals.component';
+import { DishComponent } from './dish/dish.component';
 
 
 const routes: Routes = [
@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'student', component: StudentMealsComponent },
-  { path: 'elaborate', component: ElaborateMealsComponent },
+  { path: 'dish', component: DishComponent },
 ];
 
 @NgModule({
