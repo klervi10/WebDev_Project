@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
@@ -6,7 +6,8 @@ import { FormControl, FormGroup } from '@angular/forms';
   templateUrl: './search-bar.component.html',
   styleUrls: ['./search-bar.component.css']
 })
-export class SearchBarComponent {
+export class SearchBarComponent implements OnInit {
+  @Output() filterEvent = new EventEmitter<string>()
   form: FormGroup
   filter: FormControl
 
@@ -15,6 +16,12 @@ export class SearchBarComponent {
     this.form = new FormGroup({
       filter: this.filter
     })
+  }
+
+  ngOnInit(): void {
+    this.filter.valueChanges.subscribe(
+      (filterValue: string) => this.filterEvent.emit(filterValue)
+    )
   }
 
   Meal() {

@@ -9,13 +9,12 @@ import { DataService } from '../data.service';
 
 export class HomeComponent implements OnInit {
   meals: any[] = []
-
-  constructor(private mealService: DataService) {}
-  
   currentDate: Date = new Date();
   currentMonth!: string;
   currentDay!: string;
 
+  constructor(private mealService: DataService) {}
+  
   ngOnInit(): void {
     this.currentDate = new Date();
     this.currentMonth = this.mealService.getMonthName(this.currentDate.getMonth());
@@ -28,14 +27,14 @@ export class HomeComponent implements OnInit {
     this.loadMeals();
   }
 
-  onEvent(event: any): void {
+  onFilterChanged(filterValue: string): void {
     // Tu peux traiter l'événement ici si nécessaire
-    console.log(event);
+    console.log(filterValue);
   }
 
   loadMeals(): void{
     this.mealService.getMeals().subscribe(
-      data => { this.meals = data;
-      });
-    }
+      data => this.meals = data
+    );
+  }
 }
