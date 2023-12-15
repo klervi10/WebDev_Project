@@ -9,7 +9,6 @@ import { DataService } from '../data.service';
 })
 export class CategoryComponent implements OnInit {
   categories: any[] = [];
-  logoPath: string = 'assets/Beef.png'
 
   constructor(private mealService: DataService) {}
 

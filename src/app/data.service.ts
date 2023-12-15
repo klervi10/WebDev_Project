@@ -57,8 +57,7 @@ export class DataService {
         for (let i = 0; i < data.length; i++) {
           res.push({
             name: data[i].strArea,
-            imageSrc: `assets/${data[i].strArea}/${data[i].strArea}.jpg`, // Assure-toi que le chemin est correct
-            // Ajoute d'autres propriétés si nécessaire
+            imageSrc: `assetsArea/${data[i].strArea}/${data[i].strArea}.png`,
           });
         }
         console.log(res);

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../data.service'; // Assure-toi d'importer correctement le service DataService
-import { Area } from '../area'; // Assure-toi d'importer correctement le modèle Area
+import { DataService } from '../data.service'; 
 
 @Component({
   selector: 'app-area',
@@ -8,12 +7,16 @@ import { Area } from '../area'; // Assure-toi d'importer correctement le modèle
   styleUrls: ['./area.component.css']
 })
 export class AreaComponent {
-  areas: Area[] = []; 
+  areas: any[] = []; 
 
-  constructor(private dataService: DataService) {}
+  constructor(private mealService: DataService) {}
 
   ngOnInit(): void {
-    this.dataService.getAreas().subscribe(data => {
+    this.loadAreas();
+  };
+
+  loadAreas(): void {
+    this.mealService.getAreas().subscribe((data: any) => {
       this.areas = data;
     });
   }
