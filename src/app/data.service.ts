@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, tap, map } from 'rxjs';
 import { Meals } from './meals';
+import { Area } from './area'
+import { Categories } from './Categories'
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +20,7 @@ export class DataService {
         for (let i = 0; i < data.length; i++) {
           res.push({
             name: data[i].strMeal,
-            description: data[i].strInstructions,
+            //description: data[i].strInstructions,
             img: data[i].strMealThumb,
           });
         }
@@ -28,9 +30,42 @@ export class DataService {
   }
 
 
-  getCategories(): Observable<any> {
-    return this.httpClient.get('https://www.themealdb.com/api/json/v1/1/categories.php');
+  getCategories(): Observable<Categories[]> {
+    return this.httpClient.get<any>('https://www.themealdb.com/api/json/v1/1/list.php?c=list').pipe(
+      tap((data: any) => console.log(data)),
+      map((data: any) => data.meals),
+      map((data: any[]) => {
+        const res: Categories[] = [];
+        for (let i = 0; i < data.length; i++) {
+          res.push({
+            name: data[i].strCategory,
+            imageSrc: `assets/${data[i].strCategory}/${data[i].strCategory}.png`, 
+          });
+        }
+        console.log(res);
+        return res;
+      }),
+    );
   }
+
+  getAreas(): Observable<Area[]> {
+    return this.httpClient.get<any>('https://www.themealdb.com/api/json/v1/1/list.php?a=list').pipe(
+      tap((data: any) => console.log(data)),
+      map((data: any) => data.meals),
+      map((data: any[]) => {
+        const res: Area[] = [];
+        for (let i = 0; i < data.length; i++) {
+          res.push({
+            name: data[i].strArea,
+            // Ajoute d'autres propriétés si nécessaire
+          });
+        }
+        console.log(res);
+        return res;
+      }),
+    );
+  }
+
 
 
   //loadRandomMeal() {
