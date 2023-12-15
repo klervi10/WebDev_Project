@@ -8,8 +8,8 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
-import { DishComponent } from './dish/dish.component';
-import { DessertsComponent } from './desserts/desserts.component';
+import { CategoryComponent } from './category/category.component';
+import { AreaComponent } from './area/area.component';
 
 @NgModule({
   declarations: [
@@ -18,8 +18,8 @@ import { DessertsComponent } from './desserts/desserts.component';
     FooterComponent,
     AboutComponent,
     HomeComponent,
-    DishComponent,
-    DessertsComponent,
+    CategoryComponent,
+    AreaComponent,
   ],
   imports: [
     BrowserModule,

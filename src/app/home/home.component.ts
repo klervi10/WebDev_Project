@@ -8,7 +8,8 @@ import { DataService } from '../data.service';
 })
 
 export class HomeComponent implements OnInit {
-  randomMeal: any;
+  randomMeal: any
+
   constructor(private mealService: DataService) {}
   
   currentDate: Date = new Date();
