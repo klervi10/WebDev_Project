@@ -1,10 +1,15 @@
+<!-- HTML DocType -->
 <div>
-    <h2>Bienvenue sur la page d'accueil</h2>
-    <p>Cette page est le point d'entrée de notre application...</p>
-    <p>Today, we are the {{ currentDay }}, {{ currentDate.getDate() }} {{ currentMonth }}, {{ currentDate.getFullYear() }}.</p>
-    <div *ngIf="randomMeal">
-      <h3>{{ randomMeal.strMeal }}</h3>
-      <img [src]="randomMeal.strMealThumb" alt="{{ randomMeal.strMeal }}">
-      <p>{{ randomMeal.strInstructions }}</p>
+    <h2>Toutes les recettes</h2>
+  <div class="padding-25 bg-color-1">
+    <div class="row">
+      <div *ngFor="let meal of meals" class="meal-item">
+        <img [src]="meal.img" alt="{{ meal.name }}">
+        <p>{{ meal.name }}</p>
+      </div>
     </div>
   </div>
+  <br><br><br><br><br>
+</div>
+
+

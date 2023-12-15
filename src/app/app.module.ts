@@ -10,6 +10,7 @@ import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { CategoryComponent } from './category/category.component';
 import { AreaComponent } from './area/area.component';
+import { MealsComponent } from './meals/meals.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { AreaComponent } from './area/area.component';
     HomeComponent,
     CategoryComponent,
     AreaComponent,
+    MealsComponent,
   ],
   imports: [
     BrowserModule,
