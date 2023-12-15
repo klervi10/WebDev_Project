@@ -14,7 +14,7 @@ import { AreaComponent } from './area/area.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { UserFormComponent } from './user-form/user-form.component';
-
+import { MealsComponent } from './meals/meals.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +26,8 @@ import { UserFormComponent } from './user-form/user-form.component';
     SearchBarComponent,
     CategoryComponent,
     AreaComponent,
-    UserFormComponent
+    UserFormComponent,
+    MealsComponent,
   ],
   imports: [
     BrowserModule,

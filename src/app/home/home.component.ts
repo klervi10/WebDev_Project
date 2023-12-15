@@ -8,7 +8,7 @@ import { DataService } from '../data.service';
 })
 
 export class HomeComponent implements OnInit {
-  randomMeal: any
+  meals: any[] = []
 
   constructor(private mealService: DataService) {}
   
@@ -21,9 +21,21 @@ export class HomeComponent implements OnInit {
     this.currentMonth = this.mealService.getMonthName(this.currentDate.getMonth());
     this.currentDay = this.mealService.getDayOfWeek(this.currentDate.getDay());
 
-    this.mealService.loadRandomMeal().subscribe(
-      data => console.log(data)
-    );
+    //this.mealService.loadRandomMeal().subscribe(
+    //  data => console.log(data)
+    //);
+
+    this.loadMeals();
   }
 
+  onEvent(event: any): void {
+    // Tu peux traiter l'événement ici si nécessaire
+    console.log(event);
+  }
+
+  loadMeals(): void{
+    this.mealService.getMeals().subscribe(
+      data => { this.meals = data;
+      });
+    }
 }
