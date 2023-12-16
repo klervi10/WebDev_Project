@@ -4,17 +4,17 @@ import { DataService } from '../data.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
 })
-
 export class HomeComponent implements OnInit {
-  meals: any[] = []
+  meals: any[] = [];
+  filteredMeals: any[] = [];
   currentDate: Date = new Date();
   currentMonth!: string;
   currentDay!: string;
 
   constructor(private mealService: DataService) {}
-  
+
   ngOnInit(): void {
     this.currentDate = new Date();
     this.currentMonth = this.mealService.getMonthName(this.currentDate.getMonth());
@@ -24,13 +24,19 @@ export class HomeComponent implements OnInit {
   }
 
   onFilterChanged(filterValue: string): void {
-    // Tu peux traiter l'événement ici si nécessaire
-    console.log(filterValue);
+    if (filterValue.trim() !== '') {
+      this.filteredMeals = this.meals.filter((meal) =>
+        meal.name.toLowerCase().includes(filterValue.toLowerCase())
+      );
+    } else {
+      this.filteredMeals = this.meals;
+    }
   }
 
-  loadMeals(): void{
-    this.mealService.getMeals().subscribe(
-      data => this.meals = data
-    );
+  loadMeals(): void {
+    this.mealService.getMeals('').subscribe((data) => {
+      this.meals = data;
+      this.filteredMeals = data;
+    });
   }
 }

@@ -1,10 +1,9 @@
-<!-- HTML DocType -->
 <div>
   <app-search-bar (filterEvent)="onFilterChanged($event)"></app-search-bar>
   <h2>Toutes les recettes</h2>
   <div class="padding-25 bg-color-1">
     <div class="row">
-      <div *ngFor="let meal of meals" class="meal-item">
+      <div *ngFor="let meal of filteredMeals" class="meal-item">
         <img [src]="meal.img" alt="{{ meal.name }}">
         <p>{{ meal.name }}</p>
       </div>
