@@ -48,15 +48,14 @@ export class DataService {
 
   getAreas(): Observable<Area[]> {
     return this.httpClient
-      .get<any>('https://www.themealdb.com/api/json/v1/1/list.php?a=list')
-      .pipe(
+      .get<any>('https://www.themealdb.com/api/json/v1/1/list.php?a=list').pipe(
         map((data: any) => data.meals),
         map((data: any[]) => {
           const res: Area[] = [];
           for (let i = 0; i < data.length; i++) {
             res.push({
               name: data[i].strArea,
-              imageSrc: `assetsArea/${data[i].strArea}/${data[i].strArea}.png`,
+              imageSrc: `assets/${data[i].strArea}/${data[i].strArea}.png`,
             });
           }
           return res;

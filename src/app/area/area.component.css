@@ -1,0 +1,6 @@
+/* area.component.css */
+.area-image {
+    width: 500px; /* ajuste la valeur selon tes besoins */
+    height: auto; /* ceci garantit que la hauteur est ajustée en proportion de la largeur */
+    /* ou tu peux utiliser seulement width avec une valeur en pourcentage comme width: 50%; pour une taille relative */
+  }

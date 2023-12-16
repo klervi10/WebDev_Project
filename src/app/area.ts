@@ -1,4 +1,4 @@
-// area.model.ts (exemple)
+// area.model.ts 
 export interface Area {
     name: string;
     imageSrc: string;
