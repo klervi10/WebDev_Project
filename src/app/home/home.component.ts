@@ -23,10 +23,10 @@ export class HomeComponent implements OnInit {
     this.loadMeals();
   }
 
-  onFilterChanged(filterValue: string): void {
-    if (filterValue.trim() !== '') {
+  SearchBar(filterMeal: string): void {
+    if (filterMeal.trim() !== '') {
       this.filteredMeals = this.meals.filter((meal) =>
-        meal.name.toLowerCase().includes(filterValue.toLowerCase())
+        meal.name.toLowerCase().includes(filterMeal.toLowerCase())
       );
     } else {
       this.filteredMeals = this.meals;

@@ -38,7 +38,7 @@ export class DataService {
           for (let i = 0; i < data.length; i++) {
             res.push({
               name: data[i].strCategory,
-              imageSrc: `assets/${data[i].strCategory}/${data[i].strCategory}.png`,
+              img: `assets/${data[i].strCategory}/${data[i].strCategory}.png`,
             });
           }
           return res;

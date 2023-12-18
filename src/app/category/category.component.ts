@@ -9,6 +9,7 @@ import { DataService } from '../data.service';
 })
 export class CategoryComponent implements OnInit {
   categories: any[] = [];
+  filteredCategory: any[] = [];
 
   constructor(private mealService: DataService) {}
 
@@ -16,9 +17,20 @@ export class CategoryComponent implements OnInit {
     this.loadCategories();
   }
 
+  SearchBarCat(filterValue: string): void {
+    if (filterValue.trim() !== '') {
+      this.filteredCategory = this.categories.filter((category) =>
+        category.name.toLowerCase().includes(filterValue.toLowerCase())
+      );
+    } else {
+      this.filteredCategory = this.categories;
+    }
+  }
+
   loadCategories(): void {
     this.mealService.getCategories().subscribe((data: any) => {
       this.categories = data;
+      this.filteredCategory = data; // Assurez-vous d'initialiser filteredCategory avec toutes les catégories au départ
     });
   }
 }
