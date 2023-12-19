@@ -26,9 +26,12 @@ export class AreaComponent {
     }
   }
 
+
+
   loadAreas(): void {
     this.mealService.getAreas().subscribe((data: any) => {
       this.areas = data;
+      this.filteredArea = data;
     });
   }
 

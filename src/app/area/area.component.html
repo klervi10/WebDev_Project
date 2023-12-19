@@ -1,20 +1,15 @@
-<!-- area.component.html -->
 <div class="padding-25 bg-color-1">
-    <div class="row">
-      <div class="col-12 d-flex justify-content-center f-large padding-b-25">
-        <span class="titre">Areas</span>
+  <app-search-bar (filterEvent)="SearchBarArea($event)"></app-search-bar>
+  <br>
+  <div class="row">
+    <ng-container *ngIf="filteredArea.length > 0">
+      <div class="col-3" *ngFor="let area of filteredArea">
+        <div class="area-item">
+          <img [src]="area.imageSrc" alt="{{ area.name }}" class="area-image">
+          <p>{{ area.name }}</p>
+        </div>
       </div>
-      <div class="row">
-        <ng-container *ngIf="areas.length > 0">
-          <div class="col-3" *ngFor="let area of areas">
-            <div class="area-item">
-              <img [src]="area.imageSrc" alt="{{ area.name }}" class="area-image">
-              <p>{{ area.name }}</p>
-            </div>
-          </div>
-        </ng-container>
-      </div>
-    </div>
-    <br><br><br><br><br><br><br>
+    </ng-container>
   </div>
-  
+  <br><br><br><br><br><br><br>
+</div>

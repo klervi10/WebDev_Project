@@ -30,7 +30,7 @@ export class CategoryComponent implements OnInit {
   loadCategories(): void {
     this.mealService.getCategories().subscribe((data: any) => {
       this.categories = data;
-      this.filteredCategory = data; // Assurez-vous d'initialiser filteredCategory avec toutes les catégories au départ
+      this.filteredCategory = data; 
     });
   }
 }
