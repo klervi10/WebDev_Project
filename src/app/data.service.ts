@@ -39,7 +39,8 @@ export class DataService {
           for (let i = 0; i < data.length; i++) {
             res.push({
               name: data[i].strCategory,
-              img: `assets/${data[i].strCategory}/${data[i].strCategory}.png`,
+              imageSrc: `assets/${data[i].strCategory}/${data[i].strCategory}.png`,
+              buttonLabel: `See all ${data[i].strCategory} recipes`,  // Ajoutez la propriété buttonLabel
             });
           }
           return res;
