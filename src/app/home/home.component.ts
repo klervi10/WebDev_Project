@@ -9,6 +9,7 @@ import { DataService } from '../data.service';
 export class HomeComponent implements OnInit {
   meals: any[] = [];
   filteredMeals: any[] = [];
+  
   currentDate: Date = new Date();
   currentMonth!: string;
   currentDay!: string;
