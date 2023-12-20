@@ -56,6 +56,7 @@ export class DataService {
             res.push({
               name: data[i].strArea,
               imageSrc: `assets/${data[i].strArea}/${data[i].strArea}.png`,
+              buttonLabel: `See all ${data[i].strArea} recipes`,  // Ajoutez la propriété buttonLabel
             });
           }
           return res;

@@ -1,6 +1,19 @@
 /* area.component.css */
 .area-image {
-    width: 500px; /* ajuste la valeur selon tes besoins */
-    height: auto; /* ceci garantit que la hauteur est ajustée en proportion de la largeur */
-    /* ou tu peux utiliser seulement width avec une valeur en pourcentage comme width: 50%; pour une taille relative */
-  }
+  width: 500px; /* ajuste la valeur selon tes besoins */
+  height: auto; /* ceci garantit que la hauteur est ajustée en proportion de la largeur */
+  /* ou tu peux utiliser seulement width avec une valeur en pourcentage comme width: 50%; pour une taille relative */
+}
+
+.custom-button {
+  background-color: #48464d;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.custom-button:hover {
+  background-color: #48464d;
+}

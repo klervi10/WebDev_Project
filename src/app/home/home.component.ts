@@ -15,6 +15,7 @@ export class HomeComponent implements OnInit {
 
   constructor(private mealService: DataService) {}
 
+
   ngOnInit(): void {
     this.currentDate = new Date();
     this.currentMonth = this.mealService.getMonthName(this.currentDate.getMonth());
@@ -39,4 +40,7 @@ export class HomeComponent implements OnInit {
       this.filteredMeals = data;
     });
   }
+
+
+
 }

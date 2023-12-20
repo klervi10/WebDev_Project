@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service'; 
+import { Router } from '@angular/router';
+import { Area } from '../area';
 
 @Component({
   selector: 'app-area',
@@ -10,7 +12,7 @@ export class AreaComponent {
   areas: any[] = []; 
   filteredArea: any[] = [];
 
-  constructor(private mealService: DataService) {}
+  constructor(private mealService: DataService, private router: Router) {}
 
   ngOnInit(): void {
     this.loadAreas();
@@ -33,6 +35,12 @@ export class AreaComponent {
       this.areas = data;
       this.filteredArea = data;
     });
+  }
+
+  
+  onClick(area : Area) {
+    console.log('You clicked on the button!');
+    this.router.navigate(['/american-recipe']); // Naviguez vers le nouveau composant
   }
 
 }
