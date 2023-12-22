@@ -1,0 +1,10 @@
+:host{
+   
+    background-color: #E1EBEB;
+  }
+
+
+.Image2{
+    max-width: 70%; /* Pour assurer que l'image ne dépasse pas la largeur de son conteneur */
+    height: auto;
+  }
