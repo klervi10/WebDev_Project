@@ -1,17 +1,21 @@
 /* home.component.css */
+
 :host {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; /* Ou 'space-around' selon la préférence */
-  }
-  
-  .meal-item {
-    flex-basis: calc(33.333% - 10px); /* Ajuste la largeur en fonction du nombre d'éléments par ligne */
-    margin-bottom: 20px;
-  }
-  
-  .meal-item img {
-    max-width: 30%;
-    height: auto;
-  }
-  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centrer horizontalement */
+}
+
+.meal-item {
+  text-align: center; /* Centrer le contenu à l'intérieur de chaque meal-item */
+  border: 2px solid black;
+  margin: 10px; 
+  padding: 10px;
+}
+
+.meal-image img {
+  max-width: 25%; /* Pour assurer que l'image ne dépasse pas la largeur de son conteneur */
+  height: auto;
+  display: block; 
+  margin: 0 auto;
+}

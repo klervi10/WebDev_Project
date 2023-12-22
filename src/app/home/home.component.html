@@ -4,13 +4,13 @@
   <div class="padding-25 bg-color-1">
     <div class="row">
       <div *ngFor="let meal of filteredMeals" class="meal-item">
-        <img [src]="meal.img" alt="{{ meal.name }}">
-        <div class="meal-details">
-          <p>{{ meal.name }}</p>
-          <p>{{ meal.description }}</p>
+        <br>
+        <strong>{{ meal.name }}</strong>
+        <p>{{ meal.description }}</p>
+        <div class="meal-image">
+          <img [src]="meal.img" alt="{{ meal.name }}">
+        </div>
       </div>
-    
     </div>
   </div>
 </div>
-
