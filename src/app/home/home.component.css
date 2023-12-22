@@ -4,6 +4,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center; /* Centrer horizontalement */
+  background-color: #E1EBEB;
 }
 
 .meal-item {
