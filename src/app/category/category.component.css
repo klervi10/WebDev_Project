@@ -1,39 +1,47 @@
 /*category.component.css*/
-.body{
+
+/* Set background color for the entire body */
+.body {
   background-color: #E1EBEB;
 }
 
+/* Style for category images */
 .category-image {
   width: 500px;
-  height: auto; 
+  height: auto;
 }
 
+/* Style for custom button */
 .custom-button {
-  background-color: #48464d;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  background-color: #48464d; /* Button background color */
+  color: white; /* Text color */
+  padding: 10px 20px; /* Padding around the button text */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Change cursor on hover */
 }
 
+/* Button hover effect */
 .custom-button:hover {
   background-color: #48464d;
 }
 
-.category-item{
-  text-align: center; /* Centrer le contenu à l'intérieur de chaque meal-item */
-  border: 2px solid black;
-  margin: 10px; 
-  padding: 10px;
+/* Style for each category item */
+.category-item {
+  text-align: center; /* Center-align text */
+  border: 2px solid black; /* Border around each item */
+  margin: 10px; /* Margin around each item */
+  padding: 10px; /* Padding within each item */
 }
 
-.cat{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* Centrer horizontalement */
+/* Flex layout for categories */
+.cat {
+  display: flex; /* Display as flex container */
+  flex-wrap: wrap; /* Wrap items to the next line if necessary */
+  justify-content: center; /* Center-align items horizontally */
 }
 
-h2, .search-bar, .cat-name{
-  font-family: Oswald, sans-serif;
+/* Font styles for heading, search bar, and category name */
+h2, .search-bar, .cat-name {
+  font-family: Oswald, sans-serif; /* Set font family */
 }

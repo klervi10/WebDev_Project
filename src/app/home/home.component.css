@@ -1,36 +1,41 @@
 /* home.component.css */
 
+/* Styling for the host element (component container) */
 :host {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Centrer horizontalement */
-  background-color: #E1EBEB;
+  justify-content: center; /* Horizontally center content */
+  background-color: #E1EBEB; /* Background color */
 }
 
+/* Styling for each meal item */
 .meal-item {
-  text-align: center; /* Centrer le contenu à l'intérieur de chaque meal-item */
-  border: 2px solid black;
-  margin: 10px; 
-  padding: 10px;
-  
+  text-align: center; /* Center the content inside each meal-item */
+  border: 2px solid black; /* Border around each item */
+  margin: 10px; /* Margin around each item */
+  padding: 10px; /* Padding within each item */
 }
 
+/* Styling for meal images */
 .meal-image img {
-  max-width: 25%; /* Pour assurer que l'image ne dépasse pas la largeur de son conteneur */
-  height: auto;
-  display: block; 
-  margin: 0 auto;
+  max-width: 25%; /* Ensure the image doesn't exceed container width */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Center the image */
+  margin: 0 auto; /* Center the image horizontally */
 }
 
-.meal-name{
-  font-size: 150%;
-  font-family: Oswald, sans-serif;
+/* Styling for meal names */
+.meal-name {
+  font-size: 150%; /* Font size */
+  font-family: Oswald, sans-serif; /* Font family */
 }
 
-.meal-desc{
-  font-family: Diphylleia, sans-serif;
+/* Styling for meal descriptions */
+.meal-desc {
+  font-family: Diphylleia, sans-serif; /* Font family */
 }
 
-h2, .search-bar{
-  font-family: Oswald, sans-serif;
+/* Styling for heading and search bar */
+h2, .search-bar {
+  font-family: Oswald, sans-serif; /* Font family */
 }

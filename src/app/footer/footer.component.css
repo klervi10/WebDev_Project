@@ -1,11 +1,13 @@
 /* footer.component.css */
+
+/* Styling for the footer section */
 footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 10px;
-  position: sticky;
-  bottom: 0;
-  width: 100%;
-  font-family: 'Oswald', sans-serif;
+  background-color: #333; /* Background color */
+  color: white; /* Text color */
+  text-align: center; /* Center-align text */
+  padding: 10px; /* Padding around the content */
+  position: sticky; /* Sticky positioning at the bottom */
+  bottom: 0; /* Stick to the bottom */
+  width: 100%; /* Full width */
+  font-family: 'Oswald', sans-serif; /* Font family */
 }

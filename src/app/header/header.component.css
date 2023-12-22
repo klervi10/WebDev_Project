@@ -1,46 +1,52 @@
 /* header.component.css */
+
+/* Styling for the header section */
 header {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+  background-color: #333; /* Background color */
+  color: white; /* Text color */
+  padding: 10px; /* Padding around the content */
+  display: flex; /* Display as flex container */
+  justify-content: space-between; /* Space between items */
+  align-items: center; /* Center-align items vertically */
+}
 
-  .header-container {
-    display: flex;
-    align-items: center;
-  
-  }
-  
-  nav ul {
-    list-style-type: none;
-    display: flex;
-  }
-  
-  nav ul li {
-    margin-right: 20px;
-  }
-  
-  nav ul li a {
-    color: white;
-    text-decoration: none;
-  }
+/* Styling for the header container */
+.header-container {
+  display: flex; /* Display as flex container */
+  align-items: center; /* Center-align items vertically */
+}
 
-  .Image1{
-    max-width: 7%; /* Pour assurer que l'image ne dépasse pas la largeur de son conteneur */
-    height: auto;
-  }
+/* Styling for the navigation menu */
+nav ul {
+  list-style-type: none; /* Remove list styling */
+  display: flex; /* Display as flex container */
+}
 
-  .TitreWebsite{
-    font-family: 'Rubik Doodle Shadow', sans-serif;
-    font-size: 250%;
-  }
+/* Styling for each navigation menu item */
+nav ul li {
+  margin-right: 20px; /* Margin between menu items */
+}
 
-  
+/* Styling for navigation menu item links */
+nav ul li a {
+  color: white; /* Text color */
+  text-decoration: none; /* Remove underlines from links */
+}
 
-.buttons{
-  font-size: 120%;
-  font-family: 'Rubik Doodle Shadow', sans-serif;
+/* Styling for the website logo image */
+.Image1 {
+  max-width: 7%; /* Ensure the image doesn't exceed container width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Styling for the website title */
+.TitreWebsite {
+  font-family: 'Rubik Doodle Shadow', sans-serif; /* Font family */
+  font-size: 250%; /* Font size */
+}
+
+/* Styling for buttons in the header */
+.buttons {
+  font-size: 120%; /* Font size */
+  font-family: 'Rubik Doodle Shadow', sans-serif; /* Font family */
 }

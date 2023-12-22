@@ -1,12 +1,18 @@
+<!-- home.component.html -->
+
+<!-- Main container with search bar, heading, and meal items -->
 <div>
   <app-search-bar class="search-bar" (filterEvent)="SearchBar($event)"></app-search-bar>
   <h2>All recipes</h2>
   <div class="padding-25 bg-color-1">
     <div class="row">
+      <!-- Iterate over each filtered meal using ngFor -->
       <div *ngFor="let meal of filteredMeals" class="meal-item">
         <br>
+        <!-- Display meal name and description -->
         <strong class="meal-name">{{ meal.name }}</strong>
         <p class="meal-desc">{{ meal.description }}</p>
+        <!-- Display meal image -->
         <div class="meal-image">
           <img [src]="meal.img" alt="{{ meal.name }}">
         </div>
