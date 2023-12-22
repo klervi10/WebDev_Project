@@ -1,12 +1,26 @@
-:host{
+.body{
    
     background-color: #E1EBEB;
   }
+
+
+
 
 .about-container {
     font-size: 150%;
     font-family: 'Oswald', sans-serif;
 }
+
+.mission-heading {
+    font-family: 'Oswald', sans-serif; /* Applique la police Oswald uniquement au titre "Our mission" */
+    /* Ajoutez d'autres styles spécifiques au titre si nécessaire */
+}
+
+
+.mission-text {
+    font-family: 'Diphylleia', sans-serif;
+}
+
 
   .CarteMonde-container {
     display: flex;
