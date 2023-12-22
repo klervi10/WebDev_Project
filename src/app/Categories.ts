@@ -1,5 +1,7 @@
 // categories.model.ts (exemple)
 export interface Categories {
-    name: string;
-    img: string;
-}
+        name: string;
+        imageSrc: string;
+        buttonLabel: string;
+    }
+    

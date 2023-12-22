@@ -1,6 +1,8 @@
 // category.component.ts
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
+import { Categories } from '../Categories';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-category',
@@ -11,7 +13,7 @@ export class CategoryComponent implements OnInit {
   categories: any[] = [];
   filteredCategory: any[] = [];
 
-  constructor(private mealService: DataService) {}
+  constructor(private mealService: DataService, private router : Router) {}
 
   ngOnInit(): void {
     this.loadCategories();
@@ -33,4 +35,10 @@ export class CategoryComponent implements OnInit {
       this.filteredCategory = data; 
     });
   }
+  onClick(category : Categories) {
+    console.log('You clicked on the button!');
+    this.router.navigate(['/american-recipe']); // Naviguez vers le nouveau composant
+  }
+
+
 }

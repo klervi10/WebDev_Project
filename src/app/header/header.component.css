@@ -7,6 +7,16 @@ header {
     justify-content: space-between;
     align-items: center;
   }
+
+  .logo-text {
+    margin-left: 10px; /* Ajoute une marge à gauche du texte du logo */
+ 
+  }
+
+  .header-container {
+    display: flex;
+    align-items: center;
+  }
   
   nav ul {
     list-style-type: none;
