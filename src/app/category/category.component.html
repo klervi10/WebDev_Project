@@ -5,18 +5,15 @@
   <div class="padding-25 bg-color-1">
     <div class="row">
       <ng-container *ngIf="filteredCategory.length > 0">
-        <div class="col-3" *ngFor="let category of filteredCategory">
-          <div class="category-item">
-            <img [src]="category.imageSrc" alt="{{ category.name }}" class="category">
-            <p>{{ category.name }}
-              <button style="margin-left: 10px;" class="custom-button"(click)="onClick(category)">{{ category.buttonLabel }} </button>
-            </p>
-          </div>
+        <div class="col-3" *ngFor="let category of filteredCategory" class="category-item">
+          <img [src]="category.imageSrc" alt="{{ category.name }}" class="category-image">
+          <p>{{ category.name }}
+          <button style="margin-left: 10px;" class="custom-button"(click)="onClick(category)">{{ category.buttonLabel }} </button>
+          </p>
         </div>
       </ng-container>
     </div>
   </div>
-  <br><br><br><br><br><br><br>
 </div>
 
 
