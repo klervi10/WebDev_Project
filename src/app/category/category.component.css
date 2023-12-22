@@ -1,8 +1,5 @@
 /*category.component.css*/
-:host{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* Centrer horizontalement */
+.body{
   background-color: #E1EBEB;
 }
 
@@ -29,4 +26,14 @@
   border: 2px solid black;
   margin: 10px; 
   padding: 10px;
+}
+
+.cat{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centrer horizontalement */
+}
+
+h2, .search-bar, .cat-name{
+  font-family: Oswald
 }

@@ -31,10 +31,6 @@
   font-family: Diphylleia;
 }
 
-.search-bar{
-  font-family: Oswald;
-}
-
-h2{
+h2, .search-bar{
   font-family: Oswald
 }

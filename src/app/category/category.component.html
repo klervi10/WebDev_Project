@@ -1,13 +1,13 @@
 <!-- category.component.html -->
-<div>
-  <app-search-bar (filterEvent)="SearchBarCat($event)"></app-search-bar>
-  <h2>Toutes les catégories</h2>
-  <div class="padding-25 bg-color-1">
+<div class="body">
+  <app-search-bar class="search-bar" (filterEvent)="SearchBarCat($event)"></app-search-bar>
+  <h2>All categories</h2>
+  <div class="cat">
     <div class="row">
-      <ng-container *ngIf="filteredCategory.length > 0">
+      <ng-container *ngIf="filteredCategory.length > 0" class="cat">
         <div class="col-3" *ngFor="let category of filteredCategory" class="category-item">
           <img [src]="category.imageSrc" alt="{{ category.name }}" class="category-image">
-          <p>{{ category.name }}
+          <p class="cat-name">{{ category.name }}
           <button style="margin-left: 10px;" class="custom-button"(click)="onClick(category)">{{ category.buttonLabel }} </button>
           </p>
         </div>
