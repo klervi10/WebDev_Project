@@ -9,6 +9,7 @@
 .area-image {
   width: 500px;
   height: auto; 
+  justify-content: center;
 }
 
 .custom-button {
