@@ -1,12 +1,8 @@
-.body{
-   
+.background {
     background-color: #E1EBEB;
-  }
+}
 
-
-
-
-.about-container {
+h2 {
     font-size: 150%;
     font-family: 'Oswald', sans-serif;
 }
@@ -28,24 +24,6 @@
     align-items: center; /* Centre verticalement */
     max-width: 100%; /* Pour assurer que le conteneur ne dépasse pas la largeur de son parent */
     height: 100%; /* Pour occuper 100% de la hauteur de la fenêtre (viewport height) */
-  }
-
-
-.CarteMonde{
-    max-width: 70%; /* Pour assurer que l'image ne dépasse pas la largeur de son conteneur */
-    height: auto;
-  }
-
-.Mail-container, 
-.Insta-container,
-.Fb-container,
-.Linkedin-container {
-    justify-content: center; /* Centre horizontalement */
-    align-items: center; /* Centre verticalement */
-    max-width: 30%; /* Pour assurer que le conteneur ne dépasse pas la largeur de son parent */
-    height: 100%; /* Pour occuper 100% de la hauteur de la fenêtre (viewport height) */
-    margin: 0 20px; 
-
   }
 
   .Mail, 
