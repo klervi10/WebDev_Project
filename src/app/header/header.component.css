@@ -16,6 +16,7 @@ header {
   .header-container {
     display: flex;
     align-items: center;
+  
   }
   
   nav ul {
@@ -31,3 +32,13 @@ header {
     color: white;
     text-decoration: none;
   }
+
+  .Image1{
+    max-width: 7%; /* Pour assurer que l'image ne dépasse pas la largeur de son conteneur */
+    height: auto;
+  }
+
+ /* .TitreWebsite{
+    font-family: ;
+  }
+  */
