@@ -21,7 +21,7 @@ export class DataService {
             res.push({
               name: data[i].strMeal,
               img: data[i].strMealThumb,
-              description: data[i].strInstruction
+              description: data[i].strInstruction,
             });
           }
           return res;
