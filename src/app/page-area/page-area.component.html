@@ -1,0 +1,21 @@
+<div class="bg-color-1 padding-40">
+    <div class="row">
+      <ng-container *ngFor="let meal of filteredMeals">
+        <!-- Commencez une nouvelle div pour chaque meal -->
+        <div class="meal-item">
+          <div class="col-2"></div>
+          <div class="col-10 d-flex justify-content-start">
+            {{ meal.name }}&nbsp; />
+          </div>
+          <div class="col-2"></div>
+          <div class="col-3 d-flex justify-content-start">
+          </div>
+          <div class="col-5">
+            {{ meal.description }}
+          </div>
+          <div class="col-2"></div>
+        </div>
+        <!-- Fin de la div pour chaque meal -->
+      </ng-container>
+    </div>
+  </div>

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service'; 
 import { Router } from '@angular/router';
 import { Area } from '../area';
+import { PageAreaComponent } from '../page-area/page-area.component';
 
 @Component({
   selector: 'app-area',
@@ -38,9 +39,9 @@ export class AreaComponent {
   }
 
   
-  onClick(area : Area) {
+  onClick() {
     console.log('You clicked on the button!');
-    this.router.navigate(['/american-recipe']); // Naviguez vers le nouveau composant
+    this.router.navigate(['/page-area']); // Naviguez vers le nouveau composant
   }
 
 }

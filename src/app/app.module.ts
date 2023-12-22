@@ -16,6 +16,7 @@ import { FormsModule } from '@angular/forms';
 import { UserFormComponent } from './user-form/user-form.component';
 import { MealsComponent } from './meals/meals.component';
 import { AmericanRecipeComponent } from './american-recipe/american-recipe.component';
+import { PageAreaComponent } from './page-area/page-area.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { AmericanRecipeComponent } from './american-recipe/american-recipe.compo
     UserFormComponent,
     MealsComponent,
     AmericanRecipeComponent,
+    PageAreaComponent,
   ],
   imports: [
     BrowserModule,
