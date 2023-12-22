@@ -24,13 +24,13 @@
 
 .meal-name{
   font-size: 150%;
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
 }
 
 .meal-desc{
-  font-family: Diphylleia;
+  font-family: Diphylleia, sans-serif;
 }
 
 h2, .search-bar{
-  font-family: Oswald
+  font-family: Oswald, sans-serif;
 }
