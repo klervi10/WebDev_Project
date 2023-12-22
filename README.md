@@ -35,7 +35,7 @@ The aim of our project is to have a functional Website which allows the user to 
 ## (+ the instructions for the recipe appears below??? after clicking on specific button??)
 
 ## How to install it (mock server installation, authentication setup, …)
-- ng serve on the bash terminal 
+- ng serve on the bash terminal
 - click on this link : `http://localhost:4200/`that redirects directly on our WebSite "Globe Taste Adventures"
 
 
