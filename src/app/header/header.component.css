@@ -8,11 +8,6 @@ header {
     align-items: center;
   }
 
-  .logo-text {
-    margin-left: 10px; /* Ajoute une marge à gauche du texte du logo */
- 
-  }
-
   .header-container {
     display: flex;
     align-items: center;
@@ -38,10 +33,10 @@ header {
     height: auto;
   }
 
- /* .TitreWebsite{
-    font-family: ;
+  .TitreWebsite{
+    font-family: 'Rubik Doodle Shadow', sans-serif;
+    font-size: 250%;
   }
-  */
 
   
 

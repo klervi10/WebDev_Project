@@ -12,6 +12,7 @@
   border: 2px solid black;
   margin: 10px; 
   padding: 10px;
+  
 }
 
 .meal-image img {
@@ -19,4 +20,21 @@
   height: auto;
   display: block; 
   margin: 0 auto;
+}
+
+.meal-name{
+  font-size: 150%;
+  font-family: Oswald;
+}
+
+.meal-desc{
+  font-family: Diphylleia;
+}
+
+.search-bar{
+  font-family: Oswald;
+}
+
+h2{
+  font-family: Oswald
 }
