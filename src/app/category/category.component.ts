@@ -32,6 +32,7 @@ export class CategoryComponent implements OnInit {
     if (filterValue.trim() !== '') {
       this.filteredCategory = this.categories.filter((category) =>
         category.name.toLowerCase().includes(filterValue.toLowerCase())
+        //category.name.toLowerCase().startsWith(filterValue.toLowerCase())
       );
     } else {
       this.filteredCategory = this.categories;

@@ -26,6 +26,7 @@ export class AreaComponent {
     if (filterValue.trim() !== '') {
       this.filteredArea = this.areas.filter((area) =>
       area.name.toLowerCase().includes(filterValue.toLowerCase())
+      //area.name.toLowerCase().startsWith(filterValue.toLowerCase())
       );
     } else {
       this.filteredArea = this.areas;

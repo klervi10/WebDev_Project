@@ -48,6 +48,7 @@ export class PageCategoryComponent implements OnInit {
     if (filterValue.trim() !== '') {
       this.filteredMeals = this.meals.filter((meal) =>
         meal.name.toLowerCase().includes(filterValue.toLowerCase())
+        //meal.name.toLowerCase().startsWith(filterValue.toLowerCase())
       );
     } else {
       this.filteredMeals = this.meals;
