@@ -12,7 +12,7 @@
           <img [src]="category.imageSrc" alt="{{ category.name }}" class="category-image">
           <p class="cat-name">
             {{ category.name }}
-            <button style="margin-left: 10px;" class="custom-button" (click)="onClick(category)">
+            <button style="margin-left: 10px;" class="custom-button" (click)="onClick(category.name)">
               {{ category.buttonLabel }}
             </button>
           </p>

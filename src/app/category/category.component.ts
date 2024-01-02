@@ -1,10 +1,12 @@
 // category.component.ts
 
 // Import necessary Angular modules and services
-import { Component, OnInit } from '@angular/core';
-import { DataService } from '../data.service';
-import { Categories } from '../Categories';
+import { Component, OnInit, ElementRef, NgZone, Renderer2 } from '@angular/core';
+import { DataService } from '../data.service'; 
 import { Router } from '@angular/router';
+import { Categories } from '../Categories';
+import { PageCategoryComponent } from '../page-category/page-category.component';
+import { InfoAreaService } from '../infoarea.service';
 
 // Component decorator with metadata
 @Component({
@@ -18,7 +20,7 @@ export class CategoryComponent implements OnInit {
   filteredCategory: any[] = [];
 
   // Constructor with dependency injection
-  constructor(private mealService: DataService, private router: Router) {}
+  constructor(private mealService: DataService, private router: Router, private infoAreaService: InfoAreaService, private elementRef: ElementRef, private ngZone: NgZone, private renderer: Renderer2) {}
 
   // Lifecycle hook - called after the component is initialized
   ngOnInit(): void {
@@ -45,8 +47,9 @@ export class CategoryComponent implements OnInit {
   }
 
   // Method to handle button click and navigate to a new component
-  onClick(category: Categories) {
-    console.log('You clicked on the button!');
-    this.router.navigate(['/american-recipe']); // Navigate to the new component
+  onClick(categoryName: string) {
+    console.log('You clicked on the button!', categoryName);
+    this.infoAreaService.setSelectedArea(categoryName); //changez ça!!
+    this.router.navigate(['/page-category', categoryName]); // Navigate to the new composant
   }
 }

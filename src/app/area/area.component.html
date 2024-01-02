@@ -1,15 +1,18 @@
-<div class="padding-25 bg-color-1">
-  <app-search-bar (filterEvent)="SearchBarArea($event)"></app-search-bar>
+<!-- area.component.html -->
+
+<div class="padding-25">
+  <app-search-bar class="search-bar" (filterEvent)="SearchBarArea($event)"></app-search-bar>  <h2>All areas</h2>
   <br>
+  <div class="area">
   <div class="row">
-    <ng-container *ngIf="filteredArea.length > 0">
+    <ng-container *ngIf="filteredArea.length > 0" class="area">
       <div class="col-3" *ngFor="let area of filteredArea" class="area-item">
         <img [src]="area.imageSrc" alt="{{ area.name }}" class="area-image">
-        <p>{{ area.name }}
-          <button style="margin-left: 10px;" class="custom-button"(click)="onClick()">{{ area.buttonLabel }} </button>
+        <p class="area-name">{{ area.name }}
+          <button style="margin-left: 10px;" class="custom-button" (click)="onClick(area.name)">{{ area.buttonLabel }} </button>
         </p>       
       </div>
     </ng-container>
   </div>
-  
+</div>
 </div>

@@ -2,5 +2,5 @@
 export interface Meals {
   name: string;
   img: string;
-  description: string; 
+  description: string;
 }

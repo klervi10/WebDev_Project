@@ -6,32 +6,10 @@
   }
   
   /* Style for category images */
-  .meal-image {
+  .mealdetails_image {
     width: 500px;
     height: auto;
   }
-  
-  /* Style for custom button */
-  .custom-button {
-    background-color: #48464d; /* Button background color */
-    color: white; /* Text color */
-    padding: 10px 20px; /* Padding around the button text */
-    border: none; /* No border */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Change cursor on hover */
-  }
-  
-  /* Button hover effect */
-  .custom-button:hover {
-    background-color: #48464d;
-  }
-
-  /* Flex layout for categories */
-.filteredmeals {
-  display: flex; /* Display as flex container */
-  flex-wrap: wrap; /* Wrap items to the next line if necessary */
-  justify-content: center; /* Center-align items horizontally */
-}
   
   /* Style for each category item */
   .meal-item {
@@ -42,17 +20,45 @@
   }
   
   /* Flex layout for categories */
-  .pagearea {
+  .pagemealdetail {
     display: flex; /* Display as flex container */
     flex-wrap: wrap; /* Wrap items to the next line if necessary */
     justify-content: center; /* Center-align items horizontally */
   }
   
   /* Font styles for heading, search bar, and category name */
-  h2, .search-bar, .justify-content-start {
+  h2, .justify-content-start {
     font-family: Oswald, sans-serif; /* Set font family */
+    text-align: center;
+  }
+
+  .text-center{
+    text-align: center;
   }
   
+  .mb-4 {
+    margin-bottom: 1.5rem; /* Vous pouvez ajuster la taille de la marge selon vos besoins */
+    text-align: center;
+  }
+
+  ul {
+    list-style-type: none; /* Supprime les puces devant chaque élément de la liste */
+    padding: 0; /* Supprime également le padding par défaut des listes */
+  }
+  
+  li {
+    margin-bottom: 5px; /* Ajoute un espace entre chaque élément de la liste */
+  }
+
+  .recipe-line {
+    white-space: pre-line;
+  }
+
+  .no-margin-top {
+  margin-top: 0;
+  padding-top: 0;
+}
+
   /* .search-bar {
     width: 300px;  Ajustez la largeur selon vos besoins 
     padding: 10px;

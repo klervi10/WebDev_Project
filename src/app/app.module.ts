@@ -17,6 +17,8 @@ import { UserFormComponent } from './user-form/user-form.component';
 import { MealsComponent } from './meals/meals.component';
 import { AmericanRecipeComponent } from './american-recipe/american-recipe.component';
 import { PageAreaComponent } from './page-area/page-area.component';
+import { PageCategoryComponent } from './page-category/page-category.component';
+import { MealsdetailsComponent } from './mealsdetails/mealsdetails.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,8 @@ import { PageAreaComponent } from './page-area/page-area.component';
     MealsComponent,
     AmericanRecipeComponent,
     PageAreaComponent,
+    PageCategoryComponent,
+    MealsdetailsComponent,
   ],
   imports: [
     BrowserModule,

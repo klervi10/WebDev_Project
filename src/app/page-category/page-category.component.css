@@ -1,12 +1,12 @@
 /*area.component.css*/
 
 /* Set background color for the entire body */
-.padding-25 {
+.padding-40 {
   background-color: #E1EBEB;
 }
 
 /* Style for category images */
-.area-image {
+.meal-image {
   width: 500px;
   height: auto;
 }
@@ -27,7 +27,7 @@
 }
 
 /* Style for each category item */
-.area-item {
+.meal-item {
   text-align: center; /* Center-align text */
   border: 2px solid black; /* Border around each item */
   margin: 10px; /* Margin around each item */
@@ -35,14 +35,14 @@
 }
 
 /* Flex layout for categories */
-.area {
+.pagecategory {
   display: flex; /* Display as flex container */
   flex-wrap: wrap; /* Wrap items to the next line if necessary */
   justify-content: center; /* Center-align items horizontally */
 }
 
 /* Font styles for heading, search bar, and category name */
-h2, .search-bar, .area-name {
+h2, .search-bar, .justify-content-start {
   font-family: Oswald, sans-serif; /* Set font family */
 }
 

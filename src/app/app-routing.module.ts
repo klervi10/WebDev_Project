@@ -7,6 +7,8 @@ import { CategoryComponent } from './category/category.component';
 import { AreaComponent } from './area/area.component';
 import { AmericanRecipeComponent } from './american-recipe/american-recipe.component';
 import { PageAreaComponent } from './page-area/page-area.component';
+import { PageCategoryComponent } from './page-category/page-category.component';
+import { MealsdetailsComponent } from './mealsdetails/mealsdetails.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -15,7 +17,9 @@ const routes: Routes = [
   { path: 'category', component: CategoryComponent },
   { path: 'area', component: AreaComponent },
   { path: 'american-recipe', component: AmericanRecipeComponent},
-  { path: 'page-area', component: PageAreaComponent}
+  { path: 'page-area/:country', component: PageAreaComponent},
+  { path: 'page-category/:category', component: PageCategoryComponent},
+  { path: 'page-mealsdetails/:id', component: MealsdetailsComponent}
 ];
 
 @NgModule({
