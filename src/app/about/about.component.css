@@ -26,6 +26,10 @@ h2 {
     height: 100%; /* Pour occuper 100% de la hauteur de la fenêtre (viewport height) */
   }
 
+  .image{
+    text-align: center;
+  }
+
   .Mail, 
   .Insta,
   .Fb,

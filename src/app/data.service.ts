@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, map } from 'rxjs';
+import { Observable, filter, map } from 'rxjs';
 import { Meals } from './meals';
 import { Area } from './area';
 import { Categories } from './Categories';
@@ -15,6 +15,7 @@ export class DataService {
   getMeals(search: string): Observable<Meals[]> {
     return this.httpClient
       .get<any>('https://www.themealdb.com/api/json/v1/1/search.php?s').pipe(
+        filter((data: any) => data.strMealThumb == null), //we tried to filter the dishes because one of them don't have informations or photo, but it hasn't worked.
         map((data: any) => data.meals),
         map((data: any[]) => {
           const res: Meals[] = [];
