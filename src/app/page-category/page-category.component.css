@@ -26,6 +26,13 @@
   background-color: #48464d;
 }
 
+  /* Flex layout for categories */
+  .filteredmeals {
+    display: flex; /* Display as flex container */
+    flex-wrap: wrap; /* Wrap items to the next line if necessary */
+    justify-content: center; /* Center-align items horizontally */
+  }
+
 /* Style for each category item */
 .meal-item {
   text-align: center; /* Center-align text */

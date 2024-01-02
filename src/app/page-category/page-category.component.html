@@ -1,13 +1,15 @@
 <!-- pagecategory.component.html -->
 
 <div class="padding-40">
+  <app-search-bar class="search-bar" (filterEvent)="SearchBarpageCategory($event)"></app-search-bar>
   <h2><div class="col-10 d-flex justify-content-start">
     Meals of {{ category }}&nbsp;category
   </div></h2>
     <br>
     <div class="pagecategory">
     <div class="row">
-      <ng-container *ngFor="let meal of meals" class="meal-item">
+      <ng-container *ngIf="filteredMeals.length > 0" class="filteredmeals">
+        <ng-container *ngFor="let meal of filteredMeals" class="meal-item">
         <!-- Commencez une nouvelle div pour chaque meal -->
         <div class="meal-item">
           <div class="col-2"></div>
@@ -29,5 +31,6 @@
         </div>
         <!-- Fin de la div pour chaque meal -->
       </ng-container>
+    </ng-container>
     </div>
   </div>

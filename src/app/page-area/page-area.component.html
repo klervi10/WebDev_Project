@@ -2,7 +2,6 @@
 
 <div class="padding-40">
   <app-search-bar class="search-bar" (filterEvent)="SearchBarpageArea($event)"></app-search-bar>
-  <!-- <h2>All areas</h2> -->
   <h2><div class="col-10 d-flex justify-content-start">
     {{ country }}&nbsp;meals
   </div></h2>
@@ -10,7 +9,7 @@
     <div class="pagearea">
     <div class="row">
       <ng-container *ngIf="filteredMeals.length > 0" class="filteredmeals">
-      <ng-container *ngFor="let meal of meals" class="meal-item">
+      <ng-container *ngFor="let meal of filteredMeals" class="meal-item">
         <!-- Commencez une nouvelle div pour chaque meal -->
         <div class="meal-item">
           <div class="col-2"></div>

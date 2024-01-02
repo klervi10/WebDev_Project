@@ -20,28 +20,6 @@ export class PageAreaComponent implements OnInit {
   
   country: string = ''; // Déclarer une variable pour stocker la valeur de country
 
-  
-
-    
-
-    // this.infoareService.selectedArea$.subscribe((area) => {
-    //   // Filtrer les plats par l'area sélectionnée
-    //   this.filterMealsByArea(area);
-    // });
-
-    // this.infoareService.selectedArea$.subscribe((area) => {
-    //   this.selectedArea = area;
-    // });
-
-    // this.route.paramMap.subscribe((params: ParamMap) => {
-    //   const areaname = params.get('areaName');
-    
-    //   if (areaname !== null) {
-    //     this.mealService.getMeals_areaname(areaname).subscribe(meals => {
-    //       this.meals = meals;
-    //     });
-    //   }
-    // });​
     ngOnInit(): void {
     // Souscrire aux changements de paramètres de l'URL
     this.route.paramMap.subscribe((params: ParamMap) => {
@@ -67,14 +45,19 @@ export class PageAreaComponent implements OnInit {
   }
   
   SearchBarpageArea(filterValue: string): void {
+    console.log('Filtering with:', filterValue);
+  
     if (filterValue.trim() !== '') {
       this.filteredMeals = this.meals.filter((meal) =>
         meal.name.toLowerCase().includes(filterValue.toLowerCase())
       );
     } else {
-      this.filteredMeals = this.meals; // Réinitialisez filteredMeals avec les données complètes non filtrées
+      this.filteredMeals = this.meals;
     }
+  
+    console.log('Filtered Meals:', this.filteredMeals);  //Ajoutez des journaux de débogage dans la fonction SearchBarpageArea pour voir si elle est appelée et pour vérifier les résultats de la recherche.
   }
+
 
   onButtonClick(mealdescription: string): void {
     let id: number = parseInt(mealdescription, 10);
@@ -82,32 +65,6 @@ export class PageAreaComponent implements OnInit {
     this.infoidmeal.setSelectedIdMeal(id);
     this.router.navigate(['/page-mealsdetails', id]); // Navigate to the new composant
   }
-
-  // loadMeals(): void {
-  //   // this.mealService.getMeals('').subscribe((data) => {
-  //   //   this.meals = data;
-  //   //   this.filteredMeals = data;
-
-  //   //   this.infoareService.selectedArea$.subscribe((area) => {
-  //   //     this.selectedArea = area;
-  //   //   });
-  //   name: this.infoareService.setSelectedArea;
-  //     this.route.paramMap.subscribe((params: ParamMap) => {
-  //       const areaname = params.get('name');
-      
-  //       if (areaname !== null) {
-          
-  //       }
-  //     });​
-
-
-    // filterMealsByArea(area: string): void {
-    //   this.mealService.getMeals().subscribe((data: Meals[]) => {
-    //     // Filtrer les plats par l'area
-    //     this.meals = data.filter((meal: Meals) => meal.nomArea === area);
-    //   });
-    // }
-
     
   }
 

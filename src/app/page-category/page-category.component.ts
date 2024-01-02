@@ -31,6 +31,29 @@ export class PageCategoryComponent implements OnInit {
       });
     });
 
+    this.loadMeals(this.category);
+
+  }
+
+  loadMeals(category: string): void {
+    this.mealService.getMealsByCategoryName(category).subscribe(meals => {
+      this.meals = meals;
+      this.filteredMeals = meals; // Réinitialisez filteredMeals avec les données complètes non filtrées
+    });
+  }
+  
+  SearchBarpageCategory(filterValue: string): void {
+    console.log('Filtering with:', filterValue);
+  
+    if (filterValue.trim() !== '') {
+      this.filteredMeals = this.meals.filter((meal) =>
+        meal.name.toLowerCase().includes(filterValue.toLowerCase())
+      );
+    } else {
+      this.filteredMeals = this.meals;
+    }
+  
+    console.log('Filtered Meals:', this.filteredMeals);  //Ajoutez des journaux de débogage dans la fonction SearchBarpageArea pour voir si elle est appelée et pour vérifier les résultats de la recherche.
   }
 
   onButtonClick(mealdescription: string): void {
@@ -39,23 +62,6 @@ export class PageCategoryComponent implements OnInit {
     this.infoidmeal.setSelectedIdMeal(id);
     this.router.navigate(['/page-mealsdetails', id]); // Navigate to the new composant
   }
-
-  // loadMeals(): void {
-  //   // this.mealService.getMeals('').subscribe((data) => {
-  //   //   this.meals = data;
-  //   //   this.filteredMeals = data;
-
-  //   //   this.infoareService.selectedArea$.subscribe((area) => {
-  //   //     this.selectedArea = area;
-  //   //   });
-  //   name: this.infoareService.setSelectedArea;
-  //     this.route.paramMap.subscribe((params: ParamMap) => {
-  //       const areaname = params.get('name');
-      
-  //       if (areaname !== null) {
-          
-  //       }
-  //     });​
 
   }
 
