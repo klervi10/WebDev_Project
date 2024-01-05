@@ -16,14 +16,13 @@ export class PageCategoryComponent implements OnInit {
 
   constructor(private mealService: DataService, private router: Router, private route: ActivatedRoute, private infoidmeal: InfoIdMealService) {}
   
-  category: string = ''; // Déclarer une variable pour stocker la valeur de category
-
+  category: string = ''; // Declare a variable to store the value of category
     ngOnInit(): void {
-    // Souscrire aux changements de paramètres de l'URL
+// Subscribe to URL parameter changes
     this.route.paramMap.subscribe((params: ParamMap) => {
-      // Récupérer la valeur de country à partir des paramètres de l'URL
-      this.category = params.get('category') || ''; // Utiliser '' comme valeur par défaut si category est null
-      // Vous pouvez maintenant utiliser la valeur de this.country comme nécessaire
+// Retrieving the country value from the URL parameters
+      this.category = params.get('category') || ''; // Use '' as default value if category is null
+      // We can now use the value of this.category as required
       console.log('Catégorie sélectionnée:', this.category);
 
       this.mealService.getMealsByCategoryName(this.category).subscribe(meals => {
@@ -38,7 +37,7 @@ export class PageCategoryComponent implements OnInit {
   loadMeals(category: string): void {
     this.mealService.getMealsByCategoryName(category).subscribe(meals => {
       this.meals = meals;
-      this.filteredMeals = meals; // Réinitialisez filteredMeals avec les données complètes non filtrées
+      this.filteredMeals = meals; // Reset filteredMeals with full unfiltered data
     });
   }
   
@@ -54,7 +53,7 @@ export class PageCategoryComponent implements OnInit {
       this.filteredMeals = this.meals;
     }
   
-    console.log('Filtered Meals:', this.filteredMeals);  //Ajoutez des journaux de débogage dans la fonction SearchBarpageArea pour voir si elle est appelée et pour vérifier les résultats de la recherche.
+    console.log('Filtered Meals:', this.filteredMeals); //Add debugging logs to the SearchBarpageArea function to see if it is called and to check the search results.
   }
 
   onButtonClick(mealdescription: string): void {
