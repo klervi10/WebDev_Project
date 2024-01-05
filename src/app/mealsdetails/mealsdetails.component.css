@@ -1,4 +1,4 @@
-/*area.component.css*/
+/*mealsdetails.component.css*/
 
 /* Set background color for the entire body */
 .padding-40 {
@@ -26,44 +26,41 @@
     justify-content: center; /* Center-align items horizontally */
   }
   
-  /* Font styles for heading, search bar, and category name */
+  /* Font styles for heading, and category name */
   h2, .justify-content-start {
     font-family: Oswald, sans-serif; /* Set font family */
     text-align: center;
   }
 
+  /* To center the text which is applied to this class */
   .text-center{
     text-align: center;
   }
   
+  /* To specify a specific bottom margin and central alignment of the text within the element */
   .mb-4 {
-    margin-bottom: 1.5rem; /* Vous pouvez ajuster la taille de la marge selon vos besoins */
-    text-align: center;
+    margin-bottom: 1.5rem; /* Add a lower margin of 1.5rem, you can adjust the size of the margin to suit your needs */
+    text-align: center; /* The text inside the element will be aligned to the centre. */
   }
 
+  /* Modify the style of unordered lists */
   ul {
-    list-style-type: none; /* Supprime les puces devant chaque élément de la liste */
-    padding: 0; /* Supprime également le padding par défaut des listes */
+    list-style-type: none; /* Deletes the bullets in front of each item in the list */
+    padding: 0; /* Also removes the default padding from lists */
   }
   
   li {
     margin-bottom: 5px; /* Ajoute un espace entre chaque élément de la liste */
   }
 
-  .recipe-line {
-    white-space: pre-line;
+  .recipe-line{
+    white-space: pre-line; /* preserves spaces and line breaks in text */
   }
 
+  /* Remove the top margin and top padding which are to 0. */
+  /* This ensures that no extra space is added to the top of the element which has this class applied. */
   .no-margin-top {
   margin-top: 0;
   padding-top: 0;
-}
-
-  /* .search-bar {
-    width: 300px;  Ajustez la largeur selon vos besoins 
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-  } */
+  }
   

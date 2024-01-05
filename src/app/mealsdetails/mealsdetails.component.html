@@ -1,27 +1,24 @@
 
 <!-- mealsdetails.component.html -->
-<div class="no-margin-top">
-<div class="padding-40">
-  <div *ngIf="meals && meals.length > 0" class="text-center">
-    <h2>{{ meals[0].name }}</h2>
-    <div class="pagemealdetail d-flex flex-column align-items-center">
-      <img [src]="meals[0].img" alt="{{ meals[0].name }} Image" class="mealdetails_image">
-    </div>
-      <div class="text-center">
-        <div class="mb-4">
-          <h3>Ingredients and Measures:</h3>
-          <ul>
-            <li *ngFor="let pair of ingredientsAndMeasures">{{ pair }}</li>
-          </ul>
-        </div>
-      </div>
-     
-        <div class="text-center">
-          <!-- Mettre "Recipe:" en dessous de l'image -->
-          <h3 class="mb-2">Recipe:</h3>
-          <p class="recipe-line">{{ meals[0].description }}</p>
-        </div>
 
+<div class="no-margin-top">
+  <div class="padding-40">
+    <div *ngIf="meals && meals.length > 0" class="text-center">
+      <h2>{{ meals[0].name }}</h2>
+      <div class="pagemealdetail d-flex flex-column align-items-center">
+        <img [src]="meals[0].img" alt="{{ meals[0].name }} Image" class="mealdetails_image">
+      </div>
+    <div class="text-center">
+    <div class="mb-4">
+      <h3>Ingredients and Measures:</h3>
+        <ul>
+          <li *ngFor="let pair of ingredientsAndMeasures">{{ pair }}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="text-center">
+      <h3 class="mb-2">Recipe:</h3>
+      <p class="recipe-line">{{ meals[0].description }}</p>
+    </div>
   </div>
-</div>
 </div>

@@ -32,7 +32,7 @@ export class CategoryComponent implements OnInit {
     if (filterValue.trim() !== '') {
       this.filteredCategory = this.categories.filter((category) =>
         category.name.toLowerCase().includes(filterValue.toLowerCase())
-        //category.name.toLowerCase().startsWith(filterValue.toLowerCase())
+        //category.name.toLowerCase().startsWith(filterValue.toLowerCase())  // To use the search bar to display dishes starting with what the user enters in the search bar
       );
     } else {
       this.filteredCategory = this.categories;
@@ -50,7 +50,7 @@ export class CategoryComponent implements OnInit {
   // Method to handle button click and navigate to a new component
   onClick(categoryName: string) {
     console.log('You clicked on the button!', categoryName);
-    this.infoAreaService.setSelectedArea(categoryName); //changez ça!!
+    this.infoAreaService.setSelectedArea(categoryName);
     this.router.navigate(['/page-category', categoryName]); // Navigate to the new composant
   }
 }

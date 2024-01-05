@@ -1,3 +1,7 @@
+
+/* Eliminate default margins and padding that may be applied by the browser to <body>, <header>, and <footer>. 
+This helps to ensure a more consistent and predictable appearance of the application, regardless of the browser's default styles */
+
 body, header, footer {
     margin: 0;
     padding: 0;

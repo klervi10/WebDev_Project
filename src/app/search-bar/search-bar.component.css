@@ -1,3 +1,6 @@
+/*search-bar.component.css*/
+
+/* Define a specific font for elements with this class. */
 .formgroup {
-    font: Oswald, sans-serif;
+    font: Oswald, sans-serif; /* The 'Oswald' font from the sans-serif font family is used for the text */
 }

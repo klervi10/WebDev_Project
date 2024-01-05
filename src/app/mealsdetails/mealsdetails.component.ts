@@ -1,9 +1,11 @@
+// Import necessary Angular modules and services
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
 import { InfoIdMealService } from '../infoidmeal.service';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { MealDetails } from '../meal-details';
 
+// Component decorator with metadata
 @Component({
   selector: 'app-mealsdetails',
   templateUrl: './mealsdetails.component.html',
@@ -11,14 +13,15 @@ import { MealDetails } from '../meal-details';
 })
 
 export class MealsdetailsComponent implements OnInit {
+  // Array to store all meals and meals categories
   meals: MealDetails[] = [];
   filteredMeals: any[] = [];
-  selectedIdMeal: number=0;
 
   constructor(private mealService: DataService, private router: Router, private route: ActivatedRoute, private infoidmeal: InfoIdMealService) {}
   
-  id: number=0; // Déclarer une variable pour stocker la valeur de l'id
+  id: number=0; // Declare a variable to store the value of the id
 
+  // Function for retrieving and formatting the ingredients and measurements associated with a meal
   get ingredientsAndMeasures(): string[] {
     const result: string[] = [];
 
@@ -36,14 +39,14 @@ export class MealsdetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((params: ParamMap) => {
-      // Récupérer la valeur de id à partir des paramètres de l'URL et convertir en nombre
+      // Retrieve the id value from the URL parameters and convert to a number
       const idFromParams = params.get('id');
-      this.id = idFromParams ? parseInt(idFromParams, 10) : 0; // Utilisez 0 comme valeur par défaut si id est null
-      // Vous pouvez maintenant utiliser la valeur de this.id comme nécessaire
+      this.id = idFromParams ? parseInt(idFromParams, 10) : 0; // Use 0 as default value if id is null
+      // We can now use the value of this.id as required
       console.log('id sélectionnée:', this.id);
     });
 
-      // Appeler le service avec l'ID extrait
+      // Call the service with the extracted ID
     this.mealService.getMealDetails(this.id).subscribe(meals => {
       this.meals = meals;
     });
