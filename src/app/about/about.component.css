@@ -1,41 +1,42 @@
 .background {
-    background-color: #E1EBEB;
+    background-color: #E1EBEB; /* we set the background color of the entire page,
+                                 /* here #E1EBEB represetns a light shade of blue-gray*/ 
 }
 
 h2 {
     font-size: 150%;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Oswald', sans-serif; /* Apply Oswald font with a size of 150% to all the headers of the page */
 }
 
 .mission-heading {
-    font-family: 'Oswald', sans-serif; /* Applique la police Oswald uniquement au titre "Our mission" */
-    /* Ajoutez d'autres styles spécifiques au titre si nécessaire */
+    font-family: 'Oswald', sans-serif; /* Apply Oswald font only to the "Our mission" title */
 }
 
 
 .mission-text {
-    font-family: 'Diphylleia', sans-serif;
+    font-family: 'Diphylleia', sans-serif; /* Apply Diphylleia font to the text under each header */
 }
 
 
-  .CarteMonde-container {
+  .CarteMonde-container { /* Style for a container with class 'CarteMonde-container' */
     display: flex;
-    justify-content: center; /* Centre horizontalement */
-    align-items: center; /* Centre verticalement */
-    max-width: 100%; /* Pour assurer que le conteneur ne dépasse pas la largeur de son parent */
-    height: 100%; /* Pour occuper 100% de la hauteur de la fenêtre (viewport height) */
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically center the content */
+    max-width: 100%; /* Ensure that the container does not exceed the width of its parent container */
+    height: 100%; /* Occupy 100% of the viewport height (height of the window) */
   }
 
-  .image{
+  .image{ /* Center text within an element with class 'image' */
     text-align: center;
   }
 
   .Mail, 
   .Insta,
   .Fb,
-  .Linkedin {
-    max-width: 100%; /* Pour assurer que l'image ne dépasse pas la largeur de son conteneur */
-    height: auto;
+  .Linkedin { /* Set maximum width for elements with classes 'Mail', 'Insta', 'Fb', 'Linkedin' to prevent overflow */
+
+    max-width: 100%; /* Ensure that the container does not exceed the width of its parent container */
+    height: auto; /* Maintain the aspect ratio while we adjust the height accordingly */
   }
 
   
