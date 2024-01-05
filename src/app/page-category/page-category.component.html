@@ -1,16 +1,23 @@
 <!-- pagecategory.component.html -->
 
+<!-- Container div with 40 pixels of padding -->
 <div class="padding-40">
+
+    <!-- Include the app-search-bar component with a custom class and bind the filterEvent to the SearchBarpageCategory method -->
   <app-search-bar class="search-bar" (filterEvent)="SearchBarpageCategory($event)"></app-search-bar>
-  <h2><div class="col-10 d-flex justify-content-start">
+    <!-- Heading with a dynamically bound category variable -->
+  <h2>
+    <div class="col-10 d-flex justify-content-start">
     Meals of {{ category }}&nbsp;category
   </div></h2>
     <br>
+      <!-- Container div for the pagecategory -->
     <div class="pagecategory">
     <div class="row">
+            <!-- Check if there are filtered meals to display -->
       <ng-container *ngIf="filteredMeals.length > 0" class="filteredmeals">
         <ng-container *ngFor="let meal of filteredMeals" class="meal-item">
-        <!-- Commencez une nouvelle div pour chaque meal -->
+        <!-- Start a new div for each meal -->
         <div class="meal-item">
           <div class="col-2"></div>
           <!-- <a routerlin faire un lien vers la recette--> 
@@ -18,18 +25,24 @@
             {{ meal.name }}&nbsp; <button class="custom-button" (click)="onButtonClick(meal.description)">See the recipe of {{ meal.name }}</button>
           </div>
           <br>
+
+          <!-- Add some spacing -->
           <div class="col-2"></div>
           <div class="col-3 d-flex justify-content-start">
           </div>
           <!-- <div class="col-5">
             {{ meal.description }}
           </div> -->
+
+          <!-- Display the image of the meal -->
           <div>
             <img [src]="meal.img" alt="{{ meal.name }}" class="meal-image">
           </div>
+
+          <!-- Add some spacing -->
           <div class="col-2"></div>
         </div>
-        <!-- Fin de la div pour chaque meal -->
+        <!-- End of the div for each meal -->
       </ng-container>
     </ng-container>
     </div>

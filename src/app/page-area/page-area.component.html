@@ -13,8 +13,8 @@
         <!-- Commencez une nouvelle div pour chaque meal -->
         <div class="meal-item">
           <div class="col-2"></div>
-          <!-- <a routerlin faire un lien vers la recette--> 
-          <div class="col-10 d-flex justify-content-start">
+            <!-- Display the name of the meal and a button to see the recipe when we click on it -->
+            <div class="col-10 d-flex justify-content-start">
             {{ meal.name }}&nbsp; <button class="custom-button" (click)="onButtonClick(meal.description)">See the recipe of {{ meal.name }}</button>
           </div>
           <br>
