@@ -10,26 +10,23 @@
     <div class="row">
       <ng-container *ngIf="filteredMeals.length > 0" class="filteredmeals">
       <ng-container *ngFor="let meal of filteredMeals" class="meal-item">
-        <!-- Commencez une nouvelle div pour chaque meal -->
+        <!-- Start a new div for each meal -->
         <div class="meal-item">
           <div class="col-2"></div>
-            <!-- Display the name of the meal and a button to see the recipe when we click on it -->
-            <div class="col-10 d-flex justify-content-start">
+          <!-- <a routerlin faire un lien vers la recette--> 
+          <div class="col-10 d-flex justify-content-start">
             {{ meal.name }}&nbsp; <button class="custom-button" (click)="onButtonClick(meal.description)">See the recipe of {{ meal.name }}</button>
           </div>
           <br>
           <div class="col-2"></div>
           <div class="col-3 d-flex justify-content-start">
           </div>
-          <!-- <div class="col-5">
-            {{ meal.description }}
-          </div> -->
           <div>
             <img [src]="meal.img" alt="{{ meal.name }}" class="meal-image">
           </div>
           <div class="col-2"></div>
         </div>
-        <!-- Fin de la div pour chaque meal -->
+        <!-- End of div for each meal -->
       </ng-container>
     </ng-container>
     </div>
