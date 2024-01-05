@@ -1,4 +1,4 @@
-/*area.component.css*/
+/*pagearea.component.css*/
 
 /* Set background color for the entire body */
 .padding-40 {
@@ -52,12 +52,4 @@
   h2, .search-bar, .justify-content-start {
     font-family: Oswald, sans-serif; /* Set font family */
   }
-  
-  /* .search-bar {
-    width: 300px;  Ajustez la largeur selon vos besoins 
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-  } */
   
