@@ -20,7 +20,7 @@
         <!-- Start a new div for each meal -->
         <div class="meal-item">
           <div class="col-2"></div>
-          <!-- <a routerlin faire un lien vers la recette--> 
+          <!-- Use to display the name of the meal and a button on which we can click on to see the recipe --> 
           <div class="col-10 d-flex justify-content-start">
             {{ meal.name }}&nbsp; <button class="custom-button" (click)="onButtonClick(meal.description)">See the recipe of {{ meal.name }}</button>
           </div>
