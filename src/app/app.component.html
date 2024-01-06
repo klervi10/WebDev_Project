@@ -1,5 +1,10 @@
+<!-- Application header -->
 <app-header></app-header>
+
+<!-- Router outlet: this tag displays the component associated with the current route -->
 <router-outlet></router-outlet>
-    <div *ngIf="isComponentVisible">
-        <app-footer></app-footer>
-        </div>
+
+<!-- Application footer: displayed conditionally (It uses the *ngIf directive to render the content only if isComponentVisible evaluates to true.) -->
+<div *ngIf="isComponentVisible">
+    <app-footer></app-footer>
+</div>
