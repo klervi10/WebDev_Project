@@ -28,7 +28,7 @@ export class PageAreaComponent implements OnInit {
       // Retrieving the country value from URL parameters
       this.country = params.get('country') || ''; // Use '' as default value if country is null
       // We can now use the value of this.country as required
-      console.log('Pays sélectionné:', this.country);
+      console.log('Country selected:', this.country);
 
       this.mealService.getMealsByAreaName(this.country).subscribe(meals => {
         this.meals = meals;

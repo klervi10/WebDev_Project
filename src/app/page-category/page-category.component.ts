@@ -23,7 +23,7 @@ export class PageCategoryComponent implements OnInit {
 // Retrieving the country value from the URL parameters
       this.category = params.get('category') || ''; // Use '' as default value if category is null
       // We can now use the value of this.category as required
-      console.log('Catégorie sélectionnée:', this.category);
+      console.log('Category selected:', this.category);
 
       this.mealService.getMealsByCategoryName(this.category).subscribe(meals => {
         this.meals = meals;
@@ -48,6 +48,7 @@ export class PageCategoryComponent implements OnInit {
       this.filteredMeals = this.meals.filter((meal) =>
         meal.name.toLowerCase().includes(filterValue.toLowerCase())
         //meal.name.toLowerCase().startsWith(filterValue.toLowerCase())
+        //we decided to use the first method (with includes) because we saw it in class and was better adapted for our subject
       );
     } else {
       this.filteredMeals = this.meals;
@@ -56,11 +57,14 @@ export class PageCategoryComponent implements OnInit {
     console.log('Filtered Meals:', this.filteredMeals); //Add debugging logs to the SearchBarpageArea function to see if it is called and to check the search results.
   }
 
-  onButtonClick(mealdescription: string): void {
-    let id: number = parseInt(mealdescription, 10);
-    console.log('You clicked on the button page category!', id);
-    this.infoidmeal.setSelectedIdMeal(id);
-    this.router.navigate(['/page-mealsdetails', id]); // Navigate to the new composant
+  onButtonClick(mealdescription: string): void { // Function triggered on button click, takes a meal description as a string parameter
+
+    let id: number = parseInt(mealdescription, 10); // Analyse the meal description string to extract an integer ID
+    console.log('You clicked on the button page category!', id); // Log a message indicating that the button for a specific category is clicked, along with the extracted ID
+
+    this.infoidmeal.setSelectedIdMeal(id);  // Set the selected meal ID using the infoidmeal service or component
+    this.router.navigate(['/page-mealsdetails', id]); // Navigate to a new component/page for meal details using Angular router
+
   }
 
   }
