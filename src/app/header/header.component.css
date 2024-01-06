@@ -14,6 +14,10 @@ header {
 .header-container {
   display: flex; /* Display as flex container */
   align-items: center; /* Center-align items vertically */
+  margin-top: 0px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Styling for the navigation menu */

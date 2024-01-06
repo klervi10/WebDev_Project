@@ -62,5 +62,13 @@
   .no-margin-top {
   margin-top: 0;
   padding-top: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   }
+
+  /* Sur la page où la barre de recherche est absente, écrasez la marge */
+.page-without-search .body {
+  margin-top: 0;
+}
   

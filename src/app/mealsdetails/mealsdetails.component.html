@@ -3,6 +3,7 @@
 
 <div class="no-margin-top">
   <div class="padding-40">
+    <div class="page-without-search"></div>
     <div *ngIf="meals && meals.length > 0" class="text-center">
       <h2>{{ meals[0].name }}</h2>
       <div class="pagemealdetail d-flex flex-column align-items-center">
@@ -21,4 +22,5 @@
       <p class="recipe-line">{{ meals[0].description }}</p>
     </div>
   </div>
+</div>
 </div>
