@@ -1,8 +1,13 @@
 .background {
     background-color: #E1EBEB; /* we set the background color of the entire page,
                                  /* here #E1EBEB represents a light shade of blue-gray*/ 
+    /* Resetting default margin to 0 */
     margin: 0;
+
+    /* Resetting default padding to 0 */
     padding: 0;
+
+    /* Ensuring the box model includes border and padding in element's total width and height */
     box-sizing: border-box;
 }
 
@@ -20,25 +25,24 @@ h2 {
     font-family: 'Diphylleia', sans-serif; /* Apply Diphylleia font to the text under each header */
 }
 
+.CarteMonde-container { /* Style for a container with class 'CarteMonde-container' */
+  display: flex;
+  justify-content: center; /* Horizontally center the content */
+  align-items: center; /* Vertically center the content */
+  max-width: 100%; /* Ensure that the container does not exceed the width of its parent container */
+  height: 100%; /* Occupy 100% of the viewport height (height of the window) */
+}
 
-  .CarteMonde-container { /* Style for a container with class 'CarteMonde-container' */
-    display: flex;
-    justify-content: center; /* Horizontally center the content */
-    align-items: center; /* Vertically center the content */
-    max-width: 100%; /* Ensure that the container does not exceed the width of its parent container */
-    height: 100%; /* Occupy 100% of the viewport height (height of the window) */
-  }
+.image{ /* Center text within an element with class 'image' */
+  text-align: center;
+}
 
-  .image{ /* Center text within an element with class 'image' */
-    text-align: center;
-  }
+.Mail, 
+.Insta,
+.Fb,
+.Linkedin { /* Set maximum width for elements with classes 'Mail', 'Insta', 'Fb', 'Linkedin' to prevent overflow */
 
-  .Mail, 
-  .Insta,
-  .Fb,
-  .Linkedin { /* Set maximum width for elements with classes 'Mail', 'Insta', 'Fb', 'Linkedin' to prevent overflow */
-
-    max-width: 100%; /* Ensure that the container does not exceed the width of its parent container */
-    height: auto; /* Maintain the aspect ratio while we adjust the height accordingly */
-  }
+  max-width: 100%; /* Ensure that the container does not exceed the width of its parent container */
+  height: auto; /* Maintain the aspect ratio while we adjust the height accordingly */
+}
 

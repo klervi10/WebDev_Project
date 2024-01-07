@@ -4,35 +4,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Diphylleia&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
 
-/* Réinitialiser les marges et paddings par défaut */
+/* Reset default margins and paddings */
 * {
-    /*margin: 5;*/
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Styles spécifiques pour le header */
-  .header {
-    margin-bottom: 20px; /* Ajoutez la marge souhaitée entre le header et le composant "about" */
-  }
-  
-  /* Styles spécifiques pour le composant "about" */
-  .about-component {
-    margin-top: 0px; /* Ajoutez la marge souhaitée entre le header et le composant "about" */
-    margin-bottom: 0px; /* Ajoutez la marge souhaitée entre le composant "about" et le footer */
-  }
+  /* margin: 0; */
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  .mealsdetails-component {
-    margin-top: 0px; /* Ajoutez la marge souhaitée entre le header et le composant "about" */
-    margin-bottom: 0px; /* Ajoutez la marge souhaitée entre le composant "about" et le footer */
-  }
-  
-  /* Styles spécifiques pour le footer */
-  .footer {
-    margin-top: 20px; /* Ajoutez la marge souhaitée entre le composant "about" et le footer */
-  }
-  
-  /* Styles pour le texte général (par exemple, dans les paragraphes) */
-  body {
-    margin: 10px; /* Vous pouvez ajuster cela en fonction de vos préférences pour le texte */
-  }
+/* Specific styles for the header */
+.header {
+  margin-bottom: 20px; /* Add the desired margin between the header and the "about" component */
+}
+
+/* Specific styles for the "about" component */
+.about-component {
+  margin-top: 0px; /* Add the desired margin between the header and the "about" component */
+  margin-bottom: 0px; /* Add the desired margin between the "about" component and the footer */
+}
+
+/* Specific styles for the "mealsdetails" component */
+.mealsdetails-component {
+  margin-top: 0px; /* Add the desired margin between the header and the "about" component */
+  margin-bottom: 0px; /* Add the desired margin between the "about" component and the footer */
+}
+
+/* Specific styles for the footer */
+.footer {
+  margin-top: 20px; /* Add the desired margin between the "about" component and the footer */
+}
+
+/* Styles for general text (e.g., in paragraphs) */
+body {
+  margin: 10px; /* You can adjust this based on your preferences for text */
+}

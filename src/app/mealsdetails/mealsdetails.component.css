@@ -4,8 +4,13 @@
 .padding-40 {
     background-color: #E1EBEB;
 
+    /* Resetting default margin to 0 */
     margin: 0;
+
+    /* Resetting default padding to 0 */
     padding: 0;
+
+    /* Ensuring the box model includes border and padding in element's total width and height */
     box-sizing: border-box;
   }
   
@@ -71,8 +76,7 @@
   box-sizing: border-box;
   }
 
-  /* Sur la page où la barre de recherche est absente, écrasez la marge */
-  .page-without-search .body {
+/* For a component where the search bar is absent, overwrite the margin */  .page-without-search {
    margin-top: 0;
   } 
   

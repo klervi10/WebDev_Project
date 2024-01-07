@@ -13,9 +13,7 @@ import { CategoryComponent } from './category/category.component';
 import { AreaComponent } from './area/area.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
-import { UserFormComponent } from './user-form/user-form.component';
 import { MealsComponent } from './meals/meals.component';
-import { AmericanRecipeComponent } from './american-recipe/american-recipe.component';
 import { PageAreaComponent } from './page-area/page-area.component';
 import { PageCategoryComponent } from './page-category/page-category.component';
 import { MealsdetailsComponent } from './mealsdetails/mealsdetails.component';
@@ -30,9 +28,7 @@ import { MealsdetailsComponent } from './mealsdetails/mealsdetails.component';
     SearchBarComponent,
     CategoryComponent,
     AreaComponent,
-    UserFormComponent,
     MealsComponent,
-    AmericanRecipeComponent,
     PageAreaComponent,
     PageCategoryComponent,
     MealsdetailsComponent,
