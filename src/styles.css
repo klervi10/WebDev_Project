@@ -6,7 +6,7 @@
 
 /* Réinitialiser les marges et paddings par défaut */
 * {
-    margin: 5;
+    /*margin: 5;*/
     padding: 0;
     box-sizing: border-box;
   }
@@ -18,13 +18,13 @@
   
   /* Styles spécifiques pour le composant "about" */
   .about-component {
-    margin-top: 20px; /* Ajoutez la marge souhaitée entre le header et le composant "about" */
-    margin-bottom: 20px; /* Ajoutez la marge souhaitée entre le composant "about" et le footer */
+    margin-top: 0px; /* Ajoutez la marge souhaitée entre le header et le composant "about" */
+    margin-bottom: 0px; /* Ajoutez la marge souhaitée entre le composant "about" et le footer */
   }
 
   .mealsdetails-component {
-    margin-top: 20px; /* Ajoutez la marge souhaitée entre le header et le composant "about" */
-    margin-bottom: 20px; /* Ajoutez la marge souhaitée entre le composant "about" et le footer */
+    margin-top: 0px; /* Ajoutez la marge souhaitée entre le header et le composant "about" */
+    margin-bottom: 0px; /* Ajoutez la marge souhaitée entre le composant "about" et le footer */
   }
   
   /* Styles spécifiques pour le footer */

@@ -15,7 +15,7 @@ header {
   display: flex; /* Display as flex container */
   align-items: center; /* Center-align items vertically */
   margin-top: 0px;
-  margin: 0;
+  margin-bottom: 0px; /* Ajoutez la marge inférieure souhaitée */
   padding: 0;
   box-sizing: border-box;
 }
